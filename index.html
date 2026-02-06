@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kennedy Muthii | Data Analyst & Web Developer</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Temporary styles in case CSS files don't load */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0f172a;
+            color: white;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .hero {
+            padding: 100px 0 50px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #4361ee;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .profile-pic-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 30px;
+            border: 4px solid #4361ee;
+            position: relative;
+        }
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        /* Project Image Styles */
+        .project-image {
+            height: 200px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .project-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        .project-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.8);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            .profile-pic-container {
+                width: 150px;
+                height: 150px;
+            }
+            .project-image {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1 style="margin: 0; font-size: 1.5rem;">
+                    <span style="color: #4361ee;">KENNEDY</span>
+                    <span style="color: #f72585;">MUTHII</span>
+                </h1>
+                <div>
+                    <a href="#home" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Home</a>
+                    <a href="#about" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">About</a>
+                    <a href="#projects" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Projects</a>
+                    <a href="#contact" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Profile Picture -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Profile Picture -->
+                <div class="profile-pic-container">
+                    <div class="profile-pic" id="profilePicture">
+                        <!-- Placeholder - You can add your image here -->
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                
+                <!-- Hero Text -->
+                <div style="flex: 1; min-width: 300px;">
+                    <h1 style="font-size: 3rem; margin-bottom: 1rem; line-height: 1.2;">
+                        <span style="color: #4361ee;">Data Analyst</span> & 
+                        <span style="color: #f72585;">Web Developer</span>
+                    </h1>
+                    <p style="font-size: 1.2rem; margin: 0 auto 2rem; max-width: 600px;">
+                        Hi, I'm <strong style="color: #4cc9f0;">Kennedy Muthii</strong>. I combine data insights with modern web development to create powerful, data-driven applications that solve real-world problems.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 80px 0; background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">
+                <span style="color: #4361ee;">About</span> 
+                <span style="color: #f72585;">Me</span>
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                <div>
+                    <h3 style="color: #4cc9f0; margin-bottom: 1rem;">My Journey</h3>
+                    <p style="line-height: 1.8;">
+                        I'm a passionate professional with expertise in both data analysis and web development. 
+                        My unique combination of skills allows me to not only extract meaningful insights from data 
+                        but also build the platforms to visualize and interact with those insights effectively.
+                    </p>
+                    <p style="line-height: 1.8;">
+                        With a strong foundation in Python, SQL, JavaScript, and modern web frameworks, 
+                        I bridge the gap between data science and software engineering to create comprehensive solutions.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 style="color: #4cc9f0; margin-bottom: 1rem;">What I Do</h3>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="color: #4361ee; margin: 10px 0;">
+                            <i class="fas fa-database" style="margin-right: 10px;"></i>
+                            Data Analysis
+                        </h4>
+                        <p>Data cleaning, statistical analysis, predictive modeling, and creating interactive dashboards.</p>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="color: #f72585; margin: 10px 0;">
+                            <i class="fas fa-code" style="margin-right: 10px;"></i>
+                            Web Development
+                        </h4>
+                        <p>Building responsive web applications with modern frameworks and clean architecture.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #4cc9f0; margin: 10px 0;">
+                            <i class="fas fa-chart-line" style="margin-right: 10px;"></i>
+                            Data Visualization
+                        </h4>
+                        <p>Creating compelling visual stories from complex datasets using D3.js, Chart.js, and other tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" style="padding: 80px 0;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">
+                <span style="color: #4361ee;">My</span> 
+                <span style="color: #f72585;">Projects</span>
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;" id="projectsContainer">
+                <!-- Projects will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 80px 0; background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">
+                <span style="color: #4361ee;">Contact</span> 
+                <span style="color: #f72585;">Me</span>
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px;">
+                <!-- Contact Info -->
+                <div>
+                    <h3 style="color: #4cc9f0; margin-bottom: 2rem;">Get In Touch</h3>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <div style="background: rgba(67, 97, 238, 0.2); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                <i class="fas fa-user" style="color: #4361ee;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0 0 5px 0;">Name</h4>
+                                <p style="margin: 0; color: #ccc;">Kennedy Muthii</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <div style="background: rgba(247, 37, 133, 0.2); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                <i class="fas fa-envelope" style="color: #f72585;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0 0 5px 0;">Email</h4>
+                                <p style="margin: 0; color: #ccc;">wachirak03@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center;">
+                            <div style="background: rgba(76, 201, 240, 0.2); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                <i class="fas fa-map-marker-alt" style="color: #4cc9f0;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0 0 5px 0;">Location</h4>
+                                <p style="margin: 0; color: #ccc;">Available for Remote & On-site Opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: #ccc; margin-bottom: 15px;">Connect with me:</h4>
+                        <div style="display: flex; gap: 15px;">
+                            <a href="#" style="width: 45px; height: 45px; background: rgba(67, 97, 238, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" style="width: 45px; height: 45px; background: rgba(67, 97, 238, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" style="width: 45px; height: 45px; background: rgba(247, 37, 133, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="mailto:wachirak03@gmail.com" style="width: 45px; height: 45px; background: rgba(76, 201, 240, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div>
+                    <h3 style="color: #4cc9f0; margin-bottom: 2rem;">Send a Message</h3>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 10px;">
+                        <form id="contactForm">
+                            <div style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; color: #ccc;">Your Name</label>
+                                <input type="text" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 5px; color: white; font-family: 'Poppins', sans-serif;" required>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; color: #ccc;">Your Email</label>
+                                <input type="email" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 5px; color: white; font-family: 'Poppins', sans-serif;" required>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; color: #ccc;">Subject</label>
+                                <input type="text" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 5px; color: white; font-family: 'Poppins', sans-serif;" required>
+                            </div>
+                            
+                            <div style="margin-bottom: 25px;">
+                                <label style="display: block; margin-bottom: 8px; color: #ccc;">Your Message</label>
+                                <textarea style="width: 100%; padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 5px; color: white; min-height: 150px; font-family: 'Poppins', sans-serif;" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn" style="width: 100%;">
+                                <i class="fas fa-paper-plane" style="margin-right: 10px;"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 30px 0; background: rgba(0,0,0,0.4); text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div style="text-align: left;">
+                    <h3 style="margin: 0 0 10px 0; color: #4361ee;">Kennedy Muthii</h3>
+                    <p style="margin: 0; color: #ccc;">Data Analyst & Web Developer</p>
+                </div>
+                
+                <div>
+                    <p style="margin: 0; color: #ccc;">
+                        <i class="fas fa-envelope" style="margin-right: 8px; color: #f72585;"></i>
+                        wachirak03@gmail.com
+                    </p>
+                </div>
+                
+                <div>
+                    <a href="#home" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">
+                        <i class="fas fa-arrow-up"></i> Back to Top
+                    </a>
+                </div>
+            </div>
+            
+            <hr style="border: none; height: 1px; background: rgba(255,255,255,0.1); margin: 30px 0;">
+            
+            <p style="color: #888; margin: 0;">
+                &copy; 2024 Kennedy Muthii. All rights reserved. | 
+                <span style="color: #f72585;">Built with ❤️ and code</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Project Data with Image Paths
+        const projectsData = [
+            {
+                id: 1,
+                title: "Sales Dashboard",
+                description: "Interactive dashboard analyzing e-commerce sales data with predictive insights and real-time metrics visualization.",
+                category: "data",
+                technologies: ["Python", "Tableau", "SQL", "Pandas"],
+                image: "assets/images/sales-dashboard.jpg" // Your image path
+            },
+            {
+                id: 2,
+                title: "E-commerce Platform",
+                description: "Full-stack online store with React frontend, Node.js backend, MongoDB database, and payment integration.",
+                category: "web",
+                technologies: ["React", "Node.js", "MongoDB", "Express"],
+                image: "assets/images/ecommerce-platform.jpg" // Your image path
+            },
+            {
+                id: 3,
+                title: "Real-time Analytics Dashboard",
+                description: "Live data visualization platform combining Python analytics backend with React frontend and WebSocket connections.",
+                category: "hybrid",
+                technologies: ["Python", "React", "D3.js", "Flask", "Socket.io"],
+                image: "assets/images/analytics-dashboard.jpg" // Your image path
+            },
+            {
+                id: 4,
+                title: "Customer Segmentation Analysis",
+                description: "Machine learning model to segment customers based on purchasing behavior and demographics.",
+                category: "data",
+                technologies: ["Python", "Scikit-learn", "Matplotlib", "Jupyter"],
+                image: "assets/images/customer-segmentation.jpg" // Your image path
+            },
+            {
+                id: 5,
+                title: "Task Management App",
+                description: "Productivity application with drag-and-drop interface and team collaboration features.",
+                category: "web",
+                technologies: ["Vue.js", "Firebase", "Vuetify", "Vuex"],
+                image: "assets/images/task-manager.jpg" // Your image path
+            },
+            {
+                id: 6,
+                title: "Financial Data API",
+                description: "REST API for financial data with automated data pipelines and React admin panel.",
+                category: "hybrid",
+                technologies: ["Python", "FastAPI", "React", "PostgreSQL", "Docker"],
+                image: "assets/images/financial-api.jpg" // Your image path
+            }
+        ];
+
+        // Function to create project card
+        function createProjectCard(project) {
+            // Color based on category
+            let tagColor = '';
+            let gradient = '';
+            let bgColor = '';
+            
+            switch(project.category) {
+                case 'data':
+                    tagColor = '#667eea';
+                    gradient = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                    bgColor = 'rgba(67, 97, 238, 0.2)';
+                    break;
+                case 'web':
+                    tagColor = '#f5576c';
+                    gradient = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+                    bgColor = 'rgba(245, 87, 108, 0.2)';
+                    break;
+                case 'hybrid':
+                    tagColor = '#00f2fe';
+                    gradient = 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)';
+                    bgColor = 'rgba(0, 242, 254, 0.2)';
+                    break;
+            }
+            
+            // Check if image exists, use fallback if not
+            const imageStyle = project.image ? 
+                `background-image: url('${project.image}');` : 
+                `background: ${gradient};`;
+            
+            const imageContent = project.image ? '' : 
+                `<div class="project-image-placeholder">
+                    <i class="fas fa-${project.category === 'data' ? 'chart-bar' : project.category === 'web' ? 'code' : 'project-diagram'}"></i>
+                </div>`;
+            
+            return `
+                <div class="project-card" data-category="${project.category}" data-id="${project.id}"
+                     style="background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease;">
+                    
+                    <div class="project-image" style="${imageStyle}">
+                        ${imageContent}
+                        <div class="project-tag" style="background: ${tagColor}">
+                            ${project.category.charAt(0).toUpperCase() + project.category.slice(1)}
+                        </div>
+                    </div>
+                    
+                    <div style="padding: 20px;">
+                        <h3 style="margin-top: 0; color: #4cc9f0;">${project.title}</h3>
+                        <p>${project.description}</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px;">
+                            ${project.technologies.map(tech => 
+                                `<span style="background: ${bgColor}; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem;">${tech}</span>`
+                            ).join('')}
+                        </div>
+                        
+                        <div style="margin-top: 20px; display: flex; gap: 10px;">
+                            ${project.github ? `
+                                <a href="${project.github}" target="_blank" 
+                                   style="text-decoration: none; color: white; background: rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 5px; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 5px;">
+                                    <i class="fab fa-github"></i> Code
+                                </a>` : ''}
+                            
+                            ${project.live ? `
+                                <a href="${project.live}" target="_blank" 
+                                   style="text-decoration: none; color: white; background: ${tagColor}; padding: 8px 15px; border-radius: 5px; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 5px;">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to load projects
+        function loadProjects() {
+            const projectsContainer = document.getElementById('projectsContainer');
+            
+            if (!projectsContainer) {
+                console.error('Projects container not found!');
+                return;
+            }
+            
+            // Clear container
+            projectsContainer.innerHTML = '';
+            
+            // Add each project
+            projectsData.forEach(project => {
+                const projectCard = createProjectCard(project);
+                projectsContainer.innerHTML += projectCard;
+            });
+            
+            // Add hover effects after loading
+            addProjectHoverEffects();
+        }
+
+        // Function to add hover effects to project cards
+        function addProjectHoverEffects() {
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 20px 40px rgba(0,0,0,0.3)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    const headerHeight = document.querySelector('nav').offsetHeight;
+                    window.scrollTo({
+                        top: targetElement.offsetTop - headerHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const subject = this.querySelectorAll('input[type="text"]')[1].value;
+            const message = this.querySelector('textarea').value;
+            
+            // In a real app, you would send this to a server
+            console.log('Form submitted to wachirak03@gmail.com:', { name, email, subject, message });
+            
+            // Show success message
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            submitBtn.style.background = '#4CAF50';
+            submitBtn.disabled = true;
+            
+            // Reset form
+            this.reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = '#4361ee';
+                submitBtn.disabled = false;
+            }, 3000);
+        });
+
+        // Add hover effects to social links
+        document.querySelectorAll('#contact a[href]').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Function to add your profile picture
+function addProfilePicture(imageUrl)
+ {
+    const profilePic = document.getElementById('profilePicture');
+    if (imageUrl) {
+        profilePic.innerHTML = `<img src="${imageUrl}" alt="Kennedy Muthii" style="width: 100%; height: 100%; object-fit: cover;">`;
+    } else {
+        // Keep the icon if no image
+        profilePic.innerHTML = '<i class="fas fa-user"></i>';
+    }
+}
+
+// Call the function with your image path
+addProfilePicture('assets/images/ken.jpg');
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load projects
+            loadProjects();
+            
+            // You can add your profile picture here
+            // addProfilePicture('assets/images/profile.jpg');
+        });
+
+        // You can call this function with your image URL:
+        // addProfilePicture('path/to/your/profile-picture.jpg');
+    </script>
+</body>
+</html>
